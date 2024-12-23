@@ -14,7 +14,10 @@ const app = express()
 const PORT = API_PORT
 
 app.use(express.json())
-app.use(cors()) 
+app.use(cors({
+    origin: 'https://netflix-clone-fe-r-yuchnans-projects.vercel.app/',
+    optionsSuccessStatus: 200
+}));
 
 app.use(
     "/docs",
